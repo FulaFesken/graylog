@@ -122,6 +122,7 @@ RUN \
 
 COPY docker-entrypoint.sh /
 COPY health_check.sh /
+RUN chmod 770 docker-entrypoint.sh
 
 EXPOSE 9000
 USER ${GRAYLOG_USER}
